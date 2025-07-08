@@ -44,7 +44,7 @@ export const AuthContextProvider = ({ children }) => {
   const SignUp = async (body) => {
     try {
       const res = await axios.post("https://expense-tracker-ten-omega-31.vercel.app/auth/SignUp", body);
-      alert(res.data);
+      console.log(res.data);
       return res.data;
     } catch (error) {
       console.log(error);
