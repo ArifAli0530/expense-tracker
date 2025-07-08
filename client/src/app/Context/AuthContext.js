@@ -43,7 +43,7 @@ export const AuthContextProvider = ({ children }) => {
   // Authenitcator methods
   const SignUp = async (body) => {
     try {
-      const res = await axios.post("https://expense-tracker-ten-omega-31.vercel.app//auth/SignUp", body);
+      const res = await axios.post("https://expense-tracker-ten-omega-31.vercel.app/auth/SignUp", body);
       console.log(res.data);
       return res.data;
     } catch (error) {
