@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "node index.js"
   },
-  "author": "Rohit",
+  "author": "Arif",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.3",
@@ -15,7 +15,6 @@
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.2",
-    "morgan": "^1.10.0",
-    "nodemon": "^3.1.9"
+    "morgan": "^1.10.0"
   }
 }
