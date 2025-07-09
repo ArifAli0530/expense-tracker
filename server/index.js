@@ -27,7 +27,7 @@ app.get("/",(req,res)=>{
   res.json({msg:"SERVER IS READY TO USE"})
 })
 app.listen(process.env.PORT, () => {
-  console.log(`Server Started ${PORT}`);
+  console.log(`Server Started ${process.env.PORT}`);
 });
 
 
