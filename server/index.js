@@ -5,20 +5,21 @@ const cors = require("cors");
 const { connectDB } = require("./config/db");
 const bodyParser = require("body-parser");
 const AuthRouter = require("./Routes/auth");
-const allowedOrigin = process.env.CLIENT_URL || "http://localhost:3000";
+// const allowedOrigin = process.env.CLIENT_URL ;
 dotenv.config({ path: "./config/config.env" });
 
 connectDB();
 const app = express();
-const PORT = 8000
+const PORT = 8000;
 
 
 app.use(cors({
-  origin: allowedOrigin,
-  credentials: true, // if you're using cookies or sessions
+  origin:"http://localhost:3000",
+  methods:["GET","POST","PUT"],
+  credentials: true,
 }));
 
-app.use(bodyParser.json()); 
+app.use(bodyParser.json({limit:'30mb'})); 
 app.use("/auth", AuthRouter);
 app.use("/epxense", ExpanseRouter);
 app.use(express.json());
