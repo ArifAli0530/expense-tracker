@@ -16,7 +16,6 @@ AuthRouter.post("/SignUp", async (req, res) => {
 });
 
 // SigninRequest
-
 AuthRouter.post("/SignIn", async (req, res) => {
   const { Email, Password } = req.body;
   const user = await AuthModel.findOne({
@@ -28,6 +27,5 @@ AuthRouter.post("/SignIn", async (req, res) => {
     res.send("User not founded");
   }
 });
-
 
 module.exports = AuthRouter;

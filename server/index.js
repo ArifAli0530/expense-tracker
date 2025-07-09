@@ -10,11 +10,11 @@ dotenv.config({ path: "./config/config.env" });
 
 connectDB();
 const app = express();
-const PORT = 8000;
+
 
 
 app.use(cors({
-  origin:"http://localhost:3000",
+  origin: process.env.CORS_PORT,
   methods:["GET","POST","PUT"],
   credentials: true,
 }));
@@ -26,7 +26,7 @@ app.use(express.json());
 app.get("/",(req,res)=>{
   res.json({msg:"SERVER IS READY TO USE"})
 })
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Server Started ${PORT}`);
 });
 
