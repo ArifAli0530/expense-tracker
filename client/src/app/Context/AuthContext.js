@@ -55,7 +55,9 @@ export const AuthContextProvider = ({ children }) => {
     try {
       const res = await axios.post("https://expense-tracker-ten-omega-31.vercel.app/auth/SignIn", body);
       if (res.data === "User not founded") {
+        
         return res.data;
+
       } else {
         dispatch({ type: "SIGN_IN", payload: res.data });
       }

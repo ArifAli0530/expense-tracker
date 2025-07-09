@@ -80,7 +80,7 @@ const sortExpensesByDate = (currentTransactions) => {
           </div>
           <div class="total balance shadow-lg">
             <h5>Hello,</h5>
-            <p id="total-balance">{AuthData.Username}</p>
+            <p id="total-balance">{AuthData.user.Username}</p>
           </div>
         </div>
       </div>
