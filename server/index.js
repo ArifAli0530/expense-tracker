@@ -10,7 +10,6 @@ dotenv.config({ path: "./config/config.env" });
 
 connectDB();
 
-
 app.use(cors({
   origin: process.env.CORS_PORT,
   methods:["GET","POST","PUT"],
