@@ -5,11 +5,11 @@ const cors = require("cors");
 const { connectDB } = require("./config/db");
 const bodyParser = require("body-parser");
 const AuthRouter = require("./Routes/auth");
-
+const app = express();
 dotenv.config({ path: "./config/config.env" });
 
 connectDB();
-const app = express();
+
 
 app.use(cors({
   origin: process.env.CORS_PORT,
