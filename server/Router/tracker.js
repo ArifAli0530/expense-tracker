@@ -6,6 +6,4 @@ expenceRouter.get("/getexpence/:id",getexpence)
 expenceRouter.post("/addexpence/:id",addexpence)
 expenceRouter.delete("/deleteexpence/:id",deleteexpence)
 
-
-
 module.exports = expenceRouter

@@ -22,7 +22,7 @@ if(typeof window !=="undefined")
 
 async function Usersignin(body) {
     try {
-        const response=await API.post(`/auth/usersignin`,body)
+        const response=await API.post(`https://expense-tracker-lilac-seven-29.vercel.app/auth/usersignin`,body)
         return response?.data
     } catch (error) {
         console.log(error);
@@ -32,7 +32,7 @@ async function Usersignin(body) {
 
 async function Usersignup(body) {
     try {
-      const response=await API.post(`/auth/usersignup`,body)
+      const response=await API.post(`https://expense-tracker-lilac-seven-29.vercel.app/auth/usersignup`,body)
       return response?.status;
     } catch (error) {
         console.log(error);
